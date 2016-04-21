@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务三十：表单（二）多个表单项的动态校验</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/event-util.js"></script>
+	<style type="text/css">
+		.container{
+			margin: auto;
+			text-align: center;
+			width: 500px;
+		}
+		input{
+			margin:20px 0px 20px 0px;
+			height: 25px;
+			width: 260px;
+			border: 2px solid #ccc; 
+			border-radius: 5px;
+		}
+		p{
+			margin: 0px;
+		}
+		button{
+			margin-left:10px;
+			height: 25px; 
+			cursor: pointer;
+		}
+		label{
+			display: inline-block;
+			width: 80px;
+			text-align: right;
+			margin-right: 20px;
+		}
+		.right{
+			display: inline-block;
+			position: relative;
+		}
+		span{
+			position: absolute;
+			left: 0px;
+			top: 55px;
+			font-size: 16px;
+		}
+		button{
+			width: 60px;
+			height: 35px;
+			border-radius: 5px;
+			border: none;
+			background: #2f79ba;
+			color: #ffffff;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<label>名称</label>
+		<div class="right">
+			<input type="text" id="name"></input> 
+			<span id="pname"></span>
+		</div>
+	</div>
+	<div class="container">
+		<label>密码</label>
+		<div class="right">
+			<input type="text" id="pass"></input> 
+			<span id="ppass"></span>
+		</div>
+	</div>
+	<div class="container">
+		<label>确认密码</label>
+		<div class="right">
+			<input type="text" id="cpass"></input> 
+			<span id="pcpass"></span>
+		</div>
+	</div>
+	<div class="container">
+		<label>邮箱</label>
+		<div class="right">
+			<input type="text" id="email"></input> 
+			<span id="pemail"></span>
+		</div>
+	</div>
+	<div class="container">
+		<label>手机</label>
+		<div class="right">
+			<input type="text" id="phone"></input> 
+			<span id="pphone"></span>
+		</div>
+	</div>
+	<div class="container">
+		<button id="submit">提交</button>
+	</div>
+	<script type="text/javascript" src="js/task_2_30.js"></script>
+</body>
+</html>

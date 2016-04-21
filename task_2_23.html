@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务二十三:JavaScript和树（二)</title>
+	<meta charset="utf-8"/>
+	<script type="text/javascript" src="js/event-util.js"></script>
+	<style>
+		div{
+			border: 1px solid #000000;
+			margin: 10px;
+			background: #ffffff;
+			display: flex;
+			flex-grow: 1;
+			justify-content: space-around;
+			align-items: center;
+			height: 80%;
+		}
+		#a{
+			height: 300px;
+		}
+		#h,#i,#j,#k,#l,#m,#n,#o{
+		}
+	</style>
+</head>
+<body>
+	<div id="a">one
+		<div id="b">two
+			<div id="e">five
+				<div id="k">six</div>
+				<div id="l">seven</div>
+			</div>		
+			<div id="f">
+				<div id="m">eight</div>
+				<div id="n">nine</div>
+			</div>
+		</div>
+		<div id="c">three
+			<div id="g">six
+				<div id="o">ten</div>
+				<div id="p">eleven</div>
+			</div>
+			<div id="h">
+				<div id="q">twelve</div>
+			</div>
+			<div id="i">thirteen</div>
+		</div>
+		<div id="d">four
+			<div id="j">fifteen
+				<div id="r">sixteen</div>
+				<div id="s">seventeen</div>
+			</div>
+		</div>
+	</div>
+	<button id="dfs">深度优先</button>
+	<button id="bfs">广度优先</button>
+	<input type="text" value="200"   id="time"></input>
+	<script type="text/javascript" src="js/task_2_23.js"></script>
+</body>
+</html>

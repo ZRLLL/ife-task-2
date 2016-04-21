@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务二十九：表单（一）单个表单项的检验</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		div{
+			height: 300px;
+			padding: 100px;
+			margin: auto;
+			text-align: center;
+		}
+		input{
+			margin:30px 0px 10px 20px;
+			height: 20px;
+			width: 200px; 
+		}
+		p{
+			margin: 0px;
+		}
+		button{
+			margin-left:10px;
+			height: 25px; 
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		名称<input type="text" id="name"></input><button id="submit">提交</button><br/>
+		<p id="pp">必填，长度为4-16个字符</p>
+	</div>
+	<script type="text/javascript">
+		document.getElementById('submit').onclick = function(){
+			var text = document.getElementById('name').value;
+			var len = 0;
+			for(var i = 0; i<text.length;i++){
+				charcode = text.charCodeAt(i);
+				if(charcode<128&&charcode>0){
+					len+=1;
+				}else{
+					len+=2;
+				}
+			}
+			if(len == 0){
+				document.getElementById('pp').innerText = '姓名不能为空';
+				document.getElementById('pp').style.color = 'red';
+			}else if(len>16||len<4){
+				document.getElementById('pp').innerText = '输入长度不正确,4-16';
+				document.getElementById('pp').style.color = 'red';
+			}else if(len>=4&&len<=16){
+				document.getElementById('pp').innerText = '输入格式正确';
+				document.getElementById('pp').style.color = 'green';
+			}
+		}
+	</script>
+</body>
+</html>

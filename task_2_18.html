@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>任务十八：基础JavaScript练习（一）</title>
+		<script src="js/event-util.js"></script>
+		<style>
+			ul{
+				list-style: none;
+			}
+			li{
+				float: left;
+				padding: 10px;
+				background: #FF4500;
+				color: #FAFAD2;
+				margin: 10px;
+			}
+			#in{
+				float: left;
+			}
+			#btns{
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>结点的操作</h1>
+		<p>insertBefore()方法实现向队列中某个指定节点前面插入结点</p>
+		<p>appendChild()方法向队列尾端添加一个结点</p>
+		<p>结点的childNode属性返回子节点组成的数组</p>
+		<p>removeChild()方法可以删除某个子节点</p>
+		<p>replaceChild(new,old)方法可以替换结点</p>
+		<p>cloneNode()方法可以复制节点，参数为false表示浅复制，不复制子结点，为true则表示深复制，复制子结点</p>
+		<div style="overflow:hidden">
+			<input type="text" id="in" />
+			<div id="btns">
+				<button id="left-in">左侧入</button>
+				<button id="right-in">右侧入</button>
+				<button id="left-out">左侧出</button>
+				<button id="right-out">右侧出</button>
+			</div>
+		</div>
+			
+		<ul id="val-list"></ul>
+	</body>
+	<script>
+		var $ = function(el){return document.querySelector(el)}; 
+		function testValue(){
+			return /^\d+$/.test($('#in').value)
+		}
+		function btnClick(event){
+			var event = EventUtil.getEvent(event);
+			var target = EventUtil.getTarget(event);
+			switch(target.id){
+				case 'left-in':
+					if(testValue()){
+						var li = document.createElement('li');
+						li.innerHTML = $('#in').value;
+						$('#val-list').insertBefore(li,$('#val-list').firstChild);
+						console.log($('#val-list'));
+					}
+					break;
+				case 'right-in':
+					if(testValue()){
+						var li = document.createElement('li');
+						li.innerHTML = $('#in').value;
+						$('#val-list').appendChild(li);
+					}
+					break;
+				case 'left-out':
+					$('#val-list').removeChild($('#val-list').firstChild);
+	//				$('#val-list').removeChild($('#val-list').childNodes[0]);
+					break;
+				case 'right-out':
+					$('#val-list').removeChild($('#val-list').lastChild);
+					break;
+			}
+		}
+		
+		EventUtil.addHandler('click',$('#btns'),btnClick);
+		
+		function specifyNodeOut(event){
+			var event = EventUtil.getEvent(event);
+			var target = EventUtil.getTarget(event);
+			$('#val-list').removeChild(target);
+		}
+		EventUtil.addHandler('click',$('#val-list'),specifyNodeOut);
+	</script>
+</html>

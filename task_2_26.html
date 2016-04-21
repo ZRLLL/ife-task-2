@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>任务二十六：行星与飞船（一）</title>
+	<link rel="stylesheet" type="text/css" href="css/task_2_26.css"/>
+	<script type="text/javascript" src="js/event-util.js"></script>
+	<style type="text/css">
+		.panel div{
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="control_panel" class="panel">
+		<div id="head"></div>
+		<div data-id='1'>
+			1号飞船<br/>
+			<select>
+				<option>前进号(速度30px/s 能耗5%/s)</option>
+				<option>奔腾号(速度50px/s 能耗7%/s)</option>
+				<option>超越号(速度80px/s 能耗9%/s)</option>
+			</select><br/>
+			<select>
+				<option>劲量型(补充能源速度2%/s)</option>
+				<option>光能型(补充能源速度3%/s)</option>
+				<option>永久型(补充能源速度4%/s)</option>
+			</select><br/>
+			<button  data-type='create' data-status='create'>创建飞船</button>
+			<button  data-type='destroy' >销毁飞船</button>
+			<button  data-type='start' >开始飞行</button>
+			<button  data-type='stop' >停止飞行</button>
+		</div>
+		<div data-id='2'>
+			2号飞船<br/>
+			<select>
+				<option>前进号(速度30px/s 能耗5%/s)</option>
+				<option>奔腾号(速度50px/s 能耗7%/s)</option>
+				<option>超越号(速度80px/s 能耗9%/s)</option>
+			</select><br/>
+			<select>
+				<option>劲量型(补充能源速度2%/s)</option>
+				<option>光能型(补充能源速度3%/s)</option>
+				<option>永久型(补充能源速度4%/s)</option>
+			</select><br/>
+			<button  data-type='create' data-status='create'>创建飞船</button>
+			<button  data-type='destroy' >销毁飞船</button>
+			<button  data-type='start' >开始飞行</button>
+			<button  data-type='stop' >停止飞行</button>
+		</div>
+		<div data-id='3'>
+			3号飞船<br/>
+			<select>
+				<option>前进号(速度30px/s 能耗5%/s)</option>
+				<option>奔腾号(速度50px/s 能耗7%/s)</option>
+				<option>超越号(速度80px/s 能耗9%/s)</option>
+			</select><br/>
+			<select>
+				<option>劲量型(补充能源速度2%/s)</option>
+				<option>光能型(补充能源速度3%/s)</option>
+				<option>永久型(补充能源速度4%/s)</option>
+			</select><br/>
+			<button  data-type='create' data-status='create'>创建飞船</button>
+			<button  data-type='destroy' >销毁飞船</button>
+			<button  data-type='start' >开始飞行</button>
+			<button  data-type='stop' >停止飞行</button>
+		</div>
+		<div data-id='4'>
+			4号飞船<br/>
+			<select>
+				<option>前进号(速度30px/s 能耗5%/s)</option>
+				<option>奔腾号(速度50px/s 能耗7%/s)</option>
+				<option>超越号(速度80px/s 能耗9%/s)</option>
+			</select><br/>
+			<select>
+				<option>劲量型(补充能源速度2%/s)</option>
+				<option>光能型(补充能源速度3%/s)</option>
+				<option>永久型(补充能源速度4%/s)</option>
+			</select><br/>
+			<button  data-type='create' data-status='create'>创建飞船</button>
+			<button  data-type='destroy' >销毁飞船</button>
+			<button  data-type='start' >开始飞行</button>
+			<button  data-type='stop' >停止飞行</button>
+		</div>
+	</div>
+	<div class="circle4">
+	</div>
+	<div class="circle3">
+	</div>
+	<div class="circle2">
+	</div>
+	<div class="circle1">
+	</div>
+	<div class="center">
+	</div>
+	<div id="ship_container">
+	</div>
+	<div id="console">
+		
+	</div>
+	<script type="text/javascript" src="js/task_2_26/main.js"></script>
+	<script type="text/javascript" src="js/task_2_26/commander.js"></script>
+	<script type="text/javascript" src="js/task_2_26/spaceship.js"></script>
+	<script type="text/javascript" src="js/task_2_26/spaceship_manager.js"></script>
+	<script type="text/javascript" src="js/task_2_26/interface.js"></script>
+	<script type="text/javascript" src="js/task_2_26/mediator.js"></script>
+	
+
+</body>
+</html>

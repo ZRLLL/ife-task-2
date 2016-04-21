@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>任务十九：基础JavaScript练习（二）</title>
+		<script src="js/event-util.js"></script>
+		<style>
+			ul{
+				list-style: none;
+				height: 200px;
+				display: flex;
+				align-items: flex-end;
+				padding: 0;
+			}
+			li{
+				background: #FF4500;
+				margin: 10px;
+				float: left;
+				padding: 10px;
+				color: #FAFAD2;
+			}
+			#in{
+				float: left;
+			}
+			#btns{
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="overflow:hidden">
+			<input type="text" id="in" />
+			<div id="btns">
+				<button id="left-in">左侧入</button>
+				<button id="right-in">右侧入</button>
+				<button id="left-out">左侧出</button>
+				<button id="right-out">右侧出</button>
+				<button id="random">随机生成数组</button>
+				<button id="sort">排序</button>
+			</div>
+		</div>
+		<ul id="val-list"></ul>
+	</body>
+	<script type="text/javascript" src="js/task_2_19.js" ></script>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务三十三：听指令的小方块（一）</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/task_2_33.css"/>
+</head>
+<body>
+	<div class="table">
+		<table>
+			<tbody>
+				<tr>
+					<td></td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="control-panel">
+		<button id="go">向前走</button><br/>
+		<input id="order" type="text" placeholder="请输入指令"></input>
+		<button id="exec">执行</button>
+		<p>指令列表</p>
+		<ul>
+			<li>向左转：TUN LEF</li>
+			<li>向右转：TUN RIG</li>
+			<li>向后转：TUN BAC</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/task_2_33.js"></script>
+	<script type="text/javascript">
+		controller.init();
+		document.getElementById('go').onclick = function(){
+			controller.mov();
+		}
+		document.getElementById('exec').onclick = function(){
+			if(document.getElementById('order').value == ''){
+				alert('请输入指令');
+			}else{
+				var order = document.getElementById('order').value
+				var str = 'TUN RIG TUN LEF TUN BAC TRA LEF';
+				var re = new RegExp(order, 'g');
+				if(!re.test(str)||order.length!==7){
+					alert('请输入正确的指令');
+				}else{
+					controller.turn(order);
+				}
+			}
+		}
+	</script>
+</body>
+</html>
